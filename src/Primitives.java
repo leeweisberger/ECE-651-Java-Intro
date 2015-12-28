@@ -11,5 +11,14 @@ public class Primitives {
 		short s = 5; //16 bit signed	
 		System.out.println("The most commonly used primitives are int, boolean, char, and double.");
 		System.out.println("You will occasionally use long when representing very large numbers.");
+		System.out.println("Java also includes objects that wrap primitives. The Object is the full"
+				+ "name of the primitive using a capital letter");
+		
+		Integer y=5;
+		Boolean boo = true;
+		Character c = 'a';
+		//etc...
+		
+		
 	}
 }

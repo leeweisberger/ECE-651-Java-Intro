@@ -15,6 +15,7 @@ public class ArraysAndCollections {
 	}
 
 	//use an array when you know how many elements you want to add
+	//does not resize dynamically
 	//you can create an array of primitives or any object!
 	//O(1) access O(n) insert, delete, search
 	private static void array() {
@@ -30,9 +31,10 @@ public class ArraysAndCollections {
 	//use a list when you don't know how many elements you want to add
 	//resizes dynamically
 	//Can only contain objects, no primitives!
-	//O(1) access and insert at end O(n) delete, search
+	//O(1) access and insert at end O(n) delete, search, insert anywhere but end
 	//ArrayList vs LinkedList: use ArrayList unless you want the big o advantages of linkedlist
 	private static void list() {
+		//notice we use Integer instead of int! Integer is an object, int is a primitive
 		List<Integer> list = new ArrayList<>();
 		list.add(0);
 		list.add(1);
@@ -46,9 +48,8 @@ public class ArraysAndCollections {
 	//Use a set when you don't want duplicates or a simple collection of objects with constant search
 	//resizes dynamically
 	//Can only contain objects, no primitives
-	//unordered
-	//HashSet - O(1) insert, access, deletion (assuming good hash function)
-	//TreeSet (less common) is sorted and should be used when a sorted, non-repeating collection is needed
+	//HashSet - O(1) insert, deletion, search (assuming good hash function) and unordered
+	//TreeSet (less common) is sorted and should be used when a sorted, non-duplicate collection is needed
 	private static void set() {
 		Set<Integer> set = new HashSet();
 		set.add(0);
@@ -63,8 +64,7 @@ public class ArraysAndCollections {
 	//Use a map when you want to keep track of key value pairs
 	//resizes dynamically
 	//can only contain objects, no primitives
-	//unordered
-	//HashMap - O(1) insert, access, deletion (assuming good hash function)
+	//HashMap - O(1) insert, deletion, search (assuming good hash function) and unordered
 	//Less Common: TreeMap - sorted, LinkedHashMap - ordered hash map
 	private static void map() {
 		Map<Integer, String> map = new HashMap<>();
