@@ -51,7 +51,7 @@ public class ArraysAndCollections {
 	//HashSet - O(1) insert, deletion, search (assuming good hash function) and unordered
 	//TreeSet (less common) is sorted and should be used when a sorted, non-duplicate collection is needed
 	private static void set() {
-		Set<Integer> set = new HashSet();
+		Set<Integer> set = new HashSet<>();
 		set.add(0);
 		set.add(1);
 		set.add(2);
